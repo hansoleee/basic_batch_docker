@@ -1,0 +1,37 @@
+
+spring:
+  batch:
+    job:
+      names: ${JOB:None}
+
+  main:
+    allow-bean-definition-overriding: true
+
+batch-datasource:
+  driver-class-name: org.mariadb.jdbc.Driver
+  url: jdbc:mariadb://homelhs.kro.kr:3306/LOCAL_BATCH
+  username: lhs
+  password: lhs@mariadb
+  dialect: org.hibernate.dialect.MariaDB103Dialect
+
+example-datasource:
+  driver-class-name: org.mariadb.jdbc.Driver
+  url: jdbc:mariadb://homelhs.kro.kr:3306/EXAMPLE_BATCH
+  username: lhs
+  password: lhs@mariadb
+  dialect: org.hibernate.dialect.MariaDB103Dialect
+
+source-datasource:
+  driver-class-name: org.mariadb.jdbc.Driver
+  url: jdbc:mariadb://homelhs.kro.kr:3306/SOURCE_BATCH
+  username: lhs
+  password: lhs@mariadb
+  dialect: org.hibernate.dialect.MariaDB103Dialect
+
+target-datasource:
+  driver-class-name: org.mariadb.jdbc.Driver
+  url: jdbc:mariadb://homelhs.kro.kr:3306/TARGET_BATCH
+  username: lhs
+  password: lhs@mariadb
+  dialect: org.hibernate.dialect.MariaDB103Dialect
+

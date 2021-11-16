@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  basic_batch_docker:
+    image: basic_batch_docker
+    container_name: basic_batch_docker
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./build/libs/basic_batch_docker.jar:/usr/src/app
+    restart: on-failure
